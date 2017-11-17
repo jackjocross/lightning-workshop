@@ -1,5 +1,6 @@
 import React from 'react';
+import { colors } from '../utils/palettes';
 
-const ColorPicker = () => <button>Pick a new color!</button>;
+const ColorPicker = () => /* your component JSX */ null;
 
 export default ColorPicker;
