@@ -16,11 +16,11 @@ Per the React docs..
 
 We all know components! They're great.  Just like it says above, components allow us to draw lines around our mental models and define how a particular feature looks in the browser.
 
-![component](/Users/nathanforce/Documents/Dev/lightning-workshop/component.png)
+![component](./component.png)
 
-![zoolander](/Users/nathanforce/Documents/Dev/lightning-workshop/zoolander.png)
+![zoolander](./zoolander.png)
 
-###Customization
+### Customization
 
 Awesome! We have a Profile component.  It looks exactly like we want and our inner perfectionist is satisfied.  We finish this project and get paid.  The End.
 
@@ -28,7 +28,7 @@ Fast forward a few months.  We've released the project into the wild and the cli
 
 > I would like to be able to search for users and, as I type, I would like to see a list of users that match my search.  I want to be able to see the user's information in a table as I search.
 
-Oh no! Tables? Okay back to the drawing board.![component_config](/Users/nathanforce/Documents/Dev/lightning-workshop/component_config.png)
+Oh no! Tables? Okay back to the drawing board.![component_config](./component_config.png)
 
 
 
@@ -40,19 +40,19 @@ If we take a step back and think about what we are trying to achieve with our Pr
 
 A powerful idea in React is the idea of Render Control.  For components that provide a functionality, rather than a visual representation, we want to separate functionality and rendering.  Through some advanced concepts like Render Props, Component Injection, and Compound Components, we can give render control back to the developer.  This means your component does the heavy lifting like data loading or DOM calculations or event listenting, and exposes a declarative interface for a developer to leverage that information to create some UI.
 
-### Render Control	
+### Render Control
 
-There are plenty of resources online to learn about the various methods of render control.  Below is an example of our UserData component using render props.![render](/Users/nathanforce/Documents/Dev/lightning-workshop/render.png)
+There are plenty of resources online to learn about the various methods of render control.  Below is an example of our UserData component using render props.![render](./render.png)
 
-####Render Props
+#### Render Props
 
 The Render Prop approach is the idea of providing a prop, usually named `render`, that allows a developer to pass a rendering function that will be called by the component, exposing some internal state.
 
-####Component Injection
+#### Component Injection
 
 Component injection is similar to render props, but instead of accepting a function from the developer, you expect a component definition.
 
-####Compound Components
+#### Compound Components
 
 Compound components are different subcomponents of a larger component that allow the developer to more granularly control the display of a component while keeping the logic central to the main component.
 
