@@ -16,9 +16,9 @@ Per the React docs..
 
 We all know components! They're great.  Just like it says above, components allow us to draw lines around our mental models and define how a particular feature looks in the browser.
 
-![component](./component.png)
+![component](./static/component.png)
 
-![zoolander](./zoolander.png)
+![zoolander](./static/zoolander.png)
 
 ### Customization
 
@@ -28,7 +28,7 @@ Fast forward a few months.  We've released the project into the wild and the cli
 
 > I would like to be able to search for users and, as I type, I would like to see a list of users that match my search.  I want to be able to see the user's information in a table as I search.
 
-Oh no! Tables? Okay back to the drawing board.![component_config](./component_config.png)
+Oh no! Tables? Okay back to the drawing board.![component_config](./static/component_config.png)
 
 
 
@@ -42,7 +42,7 @@ A powerful idea in React is the idea of Render Control.  For components that pro
 
 ### Render Control
 
-There are plenty of resources online to learn about the various methods of render control.  Below is an example of our UserData component using render props.![render](./render.png)
+There are plenty of resources online to learn about the various methods of render control.  Below is an example of our UserData component using render props.![render](./static/render.png)
 
 #### Render Props
 
