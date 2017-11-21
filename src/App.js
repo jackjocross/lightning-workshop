@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
 
-import Clock from './Clock';
-import CountDownClock from './CountDownClock';
-import CountDownWordClock from './CountDownWordClock';
-import ColorPicker from './ColorPicker';
-import GradientPicker from './GradientPicker';
-import CustomGradientPicker from './CustomGradientPicker';
+import Clock from './Clock/solution';
+import CountDownClock from './CountDownClock/solution';
+import CountDownWordClock from './CountDownWordClock/solution';
+import ColorPicker from './ColorPicker/solution';
+import GradientPicker from './GradientPicker/solution';
+import CustomGradientPicker from './CustomGradientPicker/solution';
+
+let date = new Date(Date.now());
+let hours = date.getHours();
+let minutes = date.getMinutes();
+let seconds = date.getSeconds();
+let from = (hours * 3600) + (minutes * 60) + seconds
 
 class App extends Component {
+
   state = {
     background: 'steelblue',
+    hours: hours,
+    minutes: minutes,
+    seconds: seconds,
+    from: from
   };
 
   render() {
@@ -24,12 +35,35 @@ class App extends Component {
           height: '100vh',
         }}
       >
-        <Clock />
-        <CountDownClock />
-        <CountDownWordClock />
-        <ColorPicker />
-        <GradientPicker />
-        <CustomGradientPicker />
+        <Clock
+          hours={ this.state.hours }
+          minutes={ this.state.minutes }
+          seconds={ this.state.seconds }
+        />
+        <CountDownClock
+          from = { this.state.from }
+        />
+        <CountDownWordClock
+          from = { this.state.from }
+        />
+        <ColorPicker
+          label='Pick Solid Background'
+          onSelect = { background => {
+            this.setState({ background });
+          }}
+        />
+        <GradientPicker
+          label='Pick Gradient Background'
+          onSelect = { background => {
+            this.setState({ background });
+          }}
+        />
+        <CustomGradientPicker
+          label='Custom Gradient Background'
+          onChange = { background => {
+            this.setState({ background });
+          }}
+        />
       </div>
     );
   }

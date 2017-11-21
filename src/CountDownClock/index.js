@@ -1,6 +1,9 @@
 import React from 'react';
+import Clock from '../Clock/solution.js'
 
-const CountDownClock = () => /* your component JSX */ null;
+const CountDownClock = () => {
+  return 'hello'
+};
 
 export default CountDownClock;
 
